@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window> 
+	<Box height="42">
+		<Control height="1" bkcolor="splitline_hor_level4" />
+		<HBox name="color_palette" visible="true" margin="30,8,30,8" padding="4,0,4,0" childmargin="16" >
+			<BrushBlock name="brush1" group="brush" margin="0,4,0,4" brush_width="2" brush_width2="10" width="18" height="18" forenormalimage="brush_block_1.png" selectedforenormalimage="brush_block_1_hot.png" selectednormalimage="pressed_bk.png" hotimage="option_bk.png" selected="false" />
+			<BrushBlock name="brush2" group="brush" margin="0,4,0,4" brush_width="4" brush_width2="20" width="18" height="18" forenormalimage="brush_block_2.png" selectedforenormalimage="brush_block_2_hot.png" selectednormalimage="pressed_bk.png" hotimage="option_bk.png" selected="true" />
+			<BrushBlock name="brush3" group="brush" margin="0,4,0,4" brush_width="6" brush_width2="30" width="18" height="18" forenormalimage="brush_block_3.png" selectedforenormalimage="brush_block_3_hot.png" selectednormalimage="pressed_bk.png" hotimage="option_bk.png" selected="false" />
+			<Control bkcolor="splitline_hor_level4" margin="0,4,0,4" width="1" height="18"/>
+			<Box>
+				<HBox name="range_box" visible="false">
+					<Label normaltextcolor="lightcolor" font="11" valign="center" margin="2,0,4,0" textid="STRID_IMAGE_BRUSH" />
+					<Slider name="range" width="200" height="14" margin="4,0,4,0" valign="center" thumbsize="14,14" min="1" max="10" progressbarpadding="0,6,0,6" bkimage="slider_hor_bk.png" progresscolor="bk_progress_progress" thumbnormalimage="slider_thumb.png"/>
+				</HBox>
+				<HBox name="color_block" childmargin="16" >
+					<ColorBlock name="color1" color="color_palette1" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color2" color="color_palette2" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color3" color="color_palette3" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color4" color="color_palette4" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color5" color="color_palette5" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color6" color="color_palette6" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color7" color="color_palette7" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color8" color="color_palette8" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+					<ColorBlock name="color9" color="color_palette9" margin="0,4,0,4" width="18" height="18" group="color_block" selectednormalimage="pressed_bk.png" pushedimage="option_bk.png" />
+				</HBox>
+			</Box>
+		</HBox>
+	</Box>
+</Window>

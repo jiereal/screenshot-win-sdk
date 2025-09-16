@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window shadowattached="false">
+	<Class name="capture_btn" value="width=&quot;26&quot; height=&quot;26&quot; cursortype=&quot;hand&quot;"/>
+	<Class name="option_btn" value="group=&quot;edit&quot; "/>
+	<Class name="splitline_hor_toolbar" value="bkcolor=&quot;splitline_hor_level4&quot; width=&quot;1&quot;"/>
+	<Class name="track_dot" value="bkimage=&quot;point.png&quot; width=&quot;9&quot; height=&quot;10&quot;"/>
+	<Box menu="true" >
+		<VBox mouse="false" mousechild="false">
+			<VBox name="bg_panel" mouse="false">
+				<Control name="top_panel" bkcolor="transbkblack1" />
+				<HBox>
+					<Control name="left_panel" bkcolor="transbkblack1" />
+					<Box mouse="false">
+						<CaptureEdit name="capture_edit" />
+					</Box>
+					<Control name="right_panel" bkcolor="transbkblack1" />
+				</HBox>
+				<Control name="bottom_panel" bkcolor="transbkblack1" />
+			</VBox>
+		</VBox>
+		<Box mouse="false">
+			<Control name="track_left_line" bkcolor="bk_lightblue" mouse="false"/>
+			<Control name="track_top_line" bkcolor="bk_lightblue" mouse="false"/>
+			<Control name="track_right_line" bkcolor="bk_lightblue" mouse="false"/>
+			<Control name="track_bottom_line" bkcolor="bk_lightblue" mouse="false"/>
+
+			<Control class="track_dot" name="track_topleft" mouse="false"/>
+			<Control class="track_dot" name="track_topright" mouse="false"/>
+			<Control class="track_dot" name="track_bottomleft" mouse="false"/>
+			<Control class="track_dot" name="track_bottomright" mouse="false"/>
+
+			<Control class="track_dot" name="track_left" mouse="false"/>
+			<Control class="track_dot" name="track_top" mouse="false"/>
+			<Control class="track_dot" name="track_right" mouse="false"/>
+			<Control class="track_dot" name="track_bottom" mouse="false"/>
+
+			<VBox name="toolbar2" bkimage="file='text_bg.png' corner='2,2,2,2'" height="28" visible="false" >
+				<Control />
+				<Label name="send_info2" normaltextcolor="lightcolor" font="11" halign="center"/>
+				<Control />
+			</VBox>
+
+			<HBox name="toolbar" >
+				<Control />
+				<VBox name="toolbar_button" width="574" height="auto" minheight="42" borderround="4,4" bkcolor="#EE020F22" >
+					<HBox height="26" margin="30,8,30,8" childmargin="12" >
+						<Option class="capture_btn option_btn" name="rectangle_option" forenormalimage="file='rectangle.png' dest='4,4,22,22'" selectedforenormalimage="file='rectangle_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_RECTANGLE"/>
+						<Option class="capture_btn option_btn" name="ellipse_option" forenormalimage="file='ellipse.png' dest='4,4,22,22'" selectedforenormalimage="file='ellipse_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_ELLIPSE"/>
+						<Option class="capture_btn option_btn" name="line_option" forenormalimage="file='line.png' dest='4,4,22,22'" selectedforenormalimage="file='line_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_LINE"/>
+						<Option class="capture_btn option_btn" name="brush_option" forenormalimage="file='brush.png' dest='4,4,22,22'" selectedforenormalimage="file='brush_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_BRUSH"/>
+						<Option class="capture_btn option_btn" name="arrow_option" forenormalimage="file='arrow.png' dest='4,4,22,22'" selectedforenormalimage="file='arrow_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_ARROW"/>
+						<Option class="capture_btn option_btn" name="mosaic_option" forenormalimage="file='mosaic.png' dest='4,4,22,22'" selectedforenormalimage="file='mosaic_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_MOSAIC"/>
+						<Option class="capture_btn option_btn" name="gauss_option" forenormalimage="file='gauss.png' dest='4,4,22,22'" selectedforenormalimage="file='gauss_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_GAUSS"/>
+						<Option class="capture_btn option_btn" name="text_option" forenormalimage="file='text.png' dest='4,4,22,22'" selectedforenormalimage="file='text_hot.png' dest='4,4,22,22'" selected="false" tooltiptextid="STRID_CAPTUREFORM_TIP_TEXT"/>
+
+						<Control class="splitline_hor_toolbar" margin="1,0,1,0" height="18" valign="center" />
+
+						<Button class="capture_btn" name="undo_btn" forenormalimage="file='undo.png' dest='4,4,22,22'" tooltiptextid="STRID_CAPTUREFORM_TIP_REVOKE"/>
+						<Button class="capture_btn" name="redo_btn" forenormalimage="file='redo.png' dest='4,4,22,22'" tooltiptextid="STRID_CAPTUREFORM_TIP_RECOVER"/>
+						<Button class="capture_btn" name="save_btn" forenormalimage="file='save.png' dest='4,4,22,22'" tooltiptextid="STRID_CAPTUREFORM_TIP_SAVE"/>
+
+						<Control class="splitline_hor_toolbar" margin="1,0,1,0" height="18" valign="center" />
+
+						<Button class="capture_btn" name="cancel_btn" font="1" forenormalimage="file='back.png' dest='4,4,22,22'" normaltextcolor="white" tooltiptextid="STRID_NO"/>
+						<Button class="capture_btn" name="send_btn" font="1" forenormalimage="file='send.png' dest='4,4,22,22'" tooltiptextid="STRID_SEND"/>
+					</HBox>
+				</VBox>
+			</HBox>
+			<VBox name="size_tip" mousechild="false" mouse="false" width="1" height="1" bkimage="file='rect.png' corner='1,1,1,1'" >
+				<Control />
+				<Label name="tip_head" font="1" margin="0,3,0,3" normaltextcolor="darkcolor" halign="center"/>
+				<Label name="tip_size" font="11" margin="0,3,0,3" normaltextcolor="darkcolor" halign="center"/>
+				<Control />
+			</VBox>
+		</Box>
+	</Box>
+</Window>
