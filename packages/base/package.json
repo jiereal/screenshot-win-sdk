@@ -1,0 +1,12 @@
+{
+  "name": "@screenshot-win-sdk/base",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "gypfile": true,
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean"
+  },
+  "dependencies": {}
+}

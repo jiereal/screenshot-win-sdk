@@ -1,0 +1,15 @@
+{
+  "name": "@screenshot-win-sdk/capture_image",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "gypfile": true,
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean"
+  },
+  "dependencies": {
+    "@screenshot-win-sdk/base": "workspace:*",
+    "@screenshot-win-sdk/duilib": "workspace:*"
+  }
+}

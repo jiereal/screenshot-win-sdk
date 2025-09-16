@@ -3,17 +3,13 @@
 	{
 		'target_name': 'screenshot_sdk',
 		'dependencies': [
-			'./src/node-util/binding.gyp:node_util',
-			'./src/nim-base/binding.gyp:base',
-			'./src/nim-base/binding.gyp:duilib',
-			'./src/nim-base/binding.gyp:capture_image',
+			'../node_util/binding.gyp',
+			'./base/binding.gyp',
+			'./duilib/binding.gyp',
+			'./capture_image/binding.gyp',
 		],
 		'include_dirs': [
-			'./src/',
-			'./src/nim_base/',
-			'./src/nim_base/tool_kits/',
-			'./src/nim_base/tool_kits/capture_image/',
-			'./src/nim_base/tool_kits/duilib/',
+			'./src/'
 		],
 		'sources': [
 			'define/sdk_define.h',
