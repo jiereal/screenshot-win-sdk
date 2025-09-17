@@ -1,1 +1,27 @@
-{	"targets": [	{		'target_name': 'node_util',		'type': 'static_library',		'include_dirs': [			'./',			'./include/'		],		'win_delay_load_hook': 'false',		'sources': [			'include/node_async_queue.h',			'include/node_event_handler.h',			'include/node_helper.h',			'src/node_async_queue.cpp',			'src/node_event_handler.cpp',			'src/node_helper.cpp',		],		'conditions': [			[				'OS=="win"',				{					'defines': [						'WIN32',						'_UNICODE',						'UNICODE',					],					'msvs_settings': {						'VCCLCompilerTool': {							'ExceptionHandling': '1', # /EHsc							'AdditionalOptions': [								# '/EHsc'							]						}					},					'configurations': {						'Release': {							'defines': [								'NDEBUG',							],							'msvs_settings': {								'VCCLCompilerTool': {									'RuntimeLibrary': '0',									'Optimization': '2',									'DebugInformationFormat': '3',									'RuntimeTypeInfo': 'true',								}							},						},						'Debug': {							'msvs_settings': {								'VCCLCompilerTool': {									'RuntimeLibrary': '1',								}							},						}					}				}			]		]	}]}
+{
+  "targets": [
+    {
+      "target_name": "node_util",
+      "type": "static_library",
+      "product_dir": "<(PRODUCT_DIR)/lib",
+      "sources": [
+        "src/node_async_queue.cpp",
+        "src/node_event_handler.cpp",
+        "src/node_helper.cpp"
+      ],
+      "include_dirs": [
+        "include",
+        "<!(node -e \"require('node-addon-api').include\")"
+      ],
+      "conditions": [
+        ["OS=='win'", {
+          "msvs_settings": {
+            "VCCLCompilerTool": {
+              "ExceptionHandling": 1
+            }
+          }
+        }]
+      ]
+    }
+  ]
+}

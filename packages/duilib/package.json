@@ -10,5 +10,8 @@
   },
   "dependencies": {
     "@screenshot-win-sdk/base": "workspace:*"
+  },
+  "devDependencies": {
+    "node-addon-api": "^8.0.0"
   }
 }

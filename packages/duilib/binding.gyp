@@ -3,6 +3,7 @@
 	{
 		"target_name": "duilib",
 		"type": "static_library",
+		"product_dir": "<(PRODUCT_DIR)/lib",
 		"include_dirs": [
 			"./",
 			"./tool_kits/",

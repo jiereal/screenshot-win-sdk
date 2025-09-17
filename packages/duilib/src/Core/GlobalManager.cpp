@@ -34,16 +34,16 @@ void GlobalManager::Startup(const std::wstring& strResourcePath, const CreateCon
 	GlobalManager::SetResourcePath(strResourcePath);
 	m_createControlCallback = callback;
 
-	// ÊÊÅäDPI
+	// ï¿½ï¿½ï¿½ï¿½DPI
 	if (bAdaptDpi){
 		//DpiManager::GetInstance()->SetAdaptDPI();
 		DpiManager::GetInstance()->SetScale(DpiManager::GetMainMonitorDpi());
 	}
 
-	// ½âÎöÈ«¾Ö×ÊÔ´ÐÅÏ¢
+	// ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½Ï¢
 	LoadGlobalResource();
 
-	// Ê¶±ð²Ù×÷ÏµÍ³ÓïÑÔ£¬ÔËÐÐ²»Í¬µÄÓïÑÔ°æ±¾
+	// Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½Ð²ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Ô°æ±¾
 	std::wstring strLanguageSetting = language;
 	if (strLanguageSetting.empty())
 	{
@@ -58,10 +58,6 @@ void GlobalManager::Startup(const std::wstring& strResourcePath, const CreateCon
 		}
 	}
 	MutiLanSupport::GetInstance()->LoadStringTable(strLangPath + strLanguageSetting + L"\\gdstrings.ini");
-
-// 	std::wstring lang = PathUtil::GetCurrentModuleDir() + L"lang\\fslinkerstd\\" + strLanguageSetting + L"\\gdstrings.ini";
-// 	::MessageBox(NULL, strResourcePath.c_str(), L"strResourcePath", MB_OK);
-// 	::MessageBox(NULL, lang.c_str(), L"lang", MB_OK);
 
 	GdiplusStartup(&g_gdiplusToken, &g_gdiplusStartupInput, NULL);
 	// Boot Windows Common Controls (for the ToolTip control)
@@ -233,7 +229,7 @@ DWORD GlobalManager::GetTextColor(const std::wstring& strName)
 {
 	if (strName.empty() || strName[0] != L'#')
 	{
-		// ±ØÐëÔÚglobal.xmlÖÐÌáÇ°¶¨Òåµ½ÑÕÉ«Öµ
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½global.xmlï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½åµ½ï¿½ï¿½É«Öµ
 		ASSERT(m_mapTextColor.find(strName.c_str()) != m_mapTextColor.end());
 		//ASSERT(m_mapTextColor[strName] != 0);
 		return m_mapTextColor[strName];
@@ -332,7 +328,7 @@ HFONT GlobalManager::AddFont(const std::wstring& strFontName, int nSize, bool bB
 	static bool bOsOverXp = IsWindowsVistaOrGreater();
 	std::wstring fontName = strFontName;
 	if ( fontName == L"system" ) {
-		fontName = bOsOverXp ? L"Î¢ÈíÑÅºÚ" : L"ÐÂËÎÌå";
+		fontName = bOsOverXp ? L"Î¢ï¿½ï¿½ï¿½Åºï¿½" : L"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 	}
 
 	LOGFONT lf = { 0 };
@@ -594,10 +590,10 @@ bool GlobalManager::ImageCacheKeyCompare::operator()(const std::wstring& key1, c
 	LPCWSTR pStr1End = pStr1Begin + nLen1;
 	LPCWSTR pStr2End = pStr2Begin + nLen2;
 
-	// ÄæÏò±È½Ï
+	// ï¿½ï¿½ï¿½ï¿½È½ï¿½
 	while (--pStr1End >= pStr1Begin && --pStr2End >= pStr2Begin && *pStr1End == *pStr2End);
 
-	// Á½¸ö´®¶¼ÒÑ¾­±È¹âÁË£¬ÄÇÃ´¿Ï¶¨ÏàµÈ£¬·µ»Øfalse
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½È¹ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Ã´ï¿½Ï¶ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½false
 	if (pStr1End < pStr1Begin) {
 		return false;
 	}

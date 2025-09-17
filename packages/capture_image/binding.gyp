@@ -3,6 +3,7 @@
 	{
 		"target_name": "capture_image",
 		"type": "static_library",
+		"product_dir": "<(PRODUCT_DIR)/lib",
 		"include_dirs": [
 			"./",
 			"./tool_kits/",
